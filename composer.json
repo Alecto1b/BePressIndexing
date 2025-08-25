@@ -1,0 +1,14 @@
+{
+    "name": "leconfe/bepressindexing",
+    "autoload": {
+        "psr-4": {
+            "BePressIndexing\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Leconfe"
+        }
+    ],
+    "require": {}
+}
