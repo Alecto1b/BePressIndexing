@@ -1,6 +1,8 @@
 name: 'Be Press Indexing Plugin'
 folder: 'BePressIndexing'
 author: 'Leconfe'
-description: 'This plugin embeds BE Press meta tags in article views for indexing purposes.'
+description: 'This plugin embeds BE Press meta tags in paper views for indexing purposes.'
 version: 1.0.0
 type: plugin
+targets: 
+  - conference
