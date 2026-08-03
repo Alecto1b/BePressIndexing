@@ -7,7 +7,6 @@ use App\Facades\Hook;
 use App\Facades\MetaTag;
 use App\Frontend\Conference\Pages\Paper;
 use App\Models\Submission;
-use Filament\Panel;
 
 class BePressIndexingPlugin extends Plugin
 {
@@ -22,7 +21,6 @@ class BePressIndexingPlugin extends Plugin
 
 	public function addMetadata(Submission $paper)
 	{
-		$site = app()->getSite();
 		$conference = app()->getCurrentConference();
 
 		MetaTag::add('bepress_citation_title', e($paper->getMeta('title')));

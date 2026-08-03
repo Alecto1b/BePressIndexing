@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.1'
+        php-version: '8.3'
         extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom, filter, gd, iconv, json, mbstring, pdo
     
     - name: Install PHP dependencies
@@ -24,7 +24,7 @@ jobs:
     - name: Prepare repository in a single folder with repository name
       run: |
         mkdir -p ./release/${{ github.event.repository.name }}
-        rsync -av --progress ./ ./release/${{ github.event.repository.name }} --exclude release --exclude .git --exclude node_modules --exclude tests --exclude .github
+        rsync -av --progress ./ ./release/${{ github.event.repository.name }} --exclude release --exclude .git --exclude node_modules --exclude tests --exclude .github --exclude "*.zip" --exclude "*.tmp" --exclude tmp
     
     - name: Create zip archive
       run: |
